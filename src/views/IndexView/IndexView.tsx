@@ -1,14 +1,8 @@
 import React from 'react';
-import { alpha, useTheme } from '@mui/material/styles';
+import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Main from 'layouts/Main';
-import Container from 'components/Container';
 import {
-  GetStarted,
-  Features,
-  QuickStart,
-  Services,
-  Benefits,
   Hero,
 } from './components';
 
@@ -18,10 +12,10 @@ const IndexView = (): JSX.Element => {
     <Box sx={{ overflowX: 'hidden' }}>
       <Main bgcolor={'background.paper'}>
         <Hero />
-        <Container>
+        {/* <Container>
           <Services />
-        </Container>
-        <Box
+        </Container> */}
+        {/* <Box
           sx={{
             backgroundImage: `linear-gradient(to bottom, ${alpha(
               theme.palette.background.paper,
@@ -57,10 +51,10 @@ const IndexView = (): JSX.Element => {
               d="M0,0c0,0,934.4,93.4,1920,0v100.1H0L0,0z"
             ></path>
           </Box>
-        </Box>
-        <Container>
+        </Box> */}
+        {/* <Container>
           <GetStarted />
-        </Container>
+        </Container> */}
       </Main>
     </Box>
   );
