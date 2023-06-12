@@ -43,7 +43,7 @@ const SidebarNav = ({ pages }: Props): JSX.Element => {
             component={'img'}
             src={
               mode === 'light'
-                ? 'https://assets.maccarianagency.com/the-front/logos/logo.svg'
+                ? 'https://img1.imgtp.com/2023/06/11/B9LRo7Qm.png'
                 : 'https://assets.maccarianagency.com/the-front/logos/logo-negative.svg'
             }
             height={1}

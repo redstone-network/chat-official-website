@@ -20,7 +20,7 @@ export default class MyDocument extends Document {
           <meta charSet="utf-8" />
           <link
             rel="shortcut icon"
-            href="https://assets.maccarianagency.com/favicons/thefront/favicon.ico"
+            href="https://img1.imgtp.com/2023/06/11/uYDjO03g.svg"
           />
           <meta name="theme-color" content="#ffffff" />
           <meta

@@ -105,7 +105,7 @@ const FullScreenHeroWithPromoImagesAndTypedText = (): JSX.Element => {
                   fontWeight: 700,
                 }}
               >
-                Turn your ideas
+                Turns your ideas
                 <br />
                 into{' '}
                 <Typography

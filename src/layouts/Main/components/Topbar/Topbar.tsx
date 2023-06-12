@@ -3,8 +3,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import { alpha, useTheme } from '@mui/material/styles';
 import MenuIcon from '@mui/icons-material/Menu';
-
-import { NavItem } from './components';
+import ThemeModeToggler from 'components/ThemeModeToggler';
 
 interface Props {
   // eslint-disable-next-line @typescript-eslint/ban-types
@@ -48,21 +47,21 @@ const Topbar = ({
         component="a"
         href="/"
         title="theFront"
-        width={{ xs: 100, md: 120 }}
+        width={{ xs: 300, md: 320 }}
       >
         <Box
           component={'img'}
           src={
             mode === 'light' && !colorInvert
-              ? 'https://assets.maccarianagency.com/the-front/logos/logo.svg'
-              : 'https://assets.maccarianagency.com/the-front/logos/logo-negative.svg'
+              ? 'https://img1.imgtp.com/2023/06/11/B9LRo7Qm.png'
+              : 'https://img1.imgtp.com/2023/06/11/B9LRo7Qm.png'
           }
           height={1}
           width={1}
-        />
+        ></Box>
       </Box>
       <Box sx={{ display: { xs: 'none', md: 'flex' } }} alignItems={'center'}>
-        <Box>
+        {/* <Box>
           <NavItem
             title={'Landings'}
             id={'landing-pages'}
@@ -109,6 +108,9 @@ const Topbar = ({
             items={portfolioPages}
             colorInvert={colorInvert}
           />
+        </Box> */}
+        <Box marginLeft={4}>
+          <ThemeModeToggler />
         </Box>
         <Box marginLeft={4}>
           <Button
@@ -116,10 +118,10 @@ const Topbar = ({
             color="primary"
             component="a"
             target="blank"
-            href="https://mui.com/store/items/the-front-landing-page/"
+            href="https://forms.gle/VXmvY3S7yN7torWT8"
             size="large"
           >
-            Buy now
+            Join Beta
           </Button>
         </Box>
       </Box>

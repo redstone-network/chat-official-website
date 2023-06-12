@@ -1,82 +1,11 @@
 import React from 'react';
-import Typed from 'react-typed';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { alpha, useTheme } from '@mui/material/styles';
-
 import Container from 'components/Container';
 
-const images = [
-  {
-    group: [
-      {
-        cover:
-          'https://assets.maccarianagency.com/screenshots/the-front/img1.png',
-        coverDark:
-          'https://assets.maccarianagency.com/screenshots/the-front/img1--dark.png',
-      },
-      {
-        cover:
-          'https://assets.maccarianagency.com/screenshots/the-front/img4.png',
-        coverDark:
-          'https://assets.maccarianagency.com/screenshots/the-front/img4--dark.png',
-      },
-    ],
-  },
-  {
-    group: [
-      {
-        cover:
-          'https://assets.maccarianagency.com/screenshots/the-front/img13.png',
-        coverDark:
-          'https://assets.maccarianagency.com/screenshots/the-front/img13--dark.png',
-      },
-      {
-        cover:
-          'https://assets.maccarianagency.com/screenshots/the-front/img10.png',
-        coverDark:
-          'https://assets.maccarianagency.com/screenshots/the-front/img10--dark.png',
-      },
-      {
-        cover:
-          'https://assets.maccarianagency.com/screenshots/the-front/img7.png',
-        coverDark:
-          'https://assets.maccarianagency.com/screenshots/the-front/img7--dark.png',
-      },
-    ],
-  },
-  {
-    group: [
-      {
-        cover:
-          'https://assets.maccarianagency.com/screenshots/the-front/img6.png',
-        coverDark:
-          'https://assets.maccarianagency.com/screenshots/the-front/img6--dark.png',
-      },
-      {
-        cover:
-          'https://assets.maccarianagency.com/screenshots/the-front/img24.png',
-        coverDark:
-          'https://assets.maccarianagency.com/screenshots/the-front/img24--dark.png',
-      },
-      {
-        cover:
-          'https://assets.maccarianagency.com/screenshots/the-front/img17.png',
-        coverDark:
-          'https://assets.maccarianagency.com/screenshots/the-front/img17--dark.png',
-      },
-      {
-        cover:
-          'https://assets.maccarianagency.com/screenshots/the-front/img12.png',
-        coverDark:
-          'https://assets.maccarianagency.com/screenshots/the-front/img12--dark.png',
-      },
-    ],
-  },
-];
 
 const Hero = (): JSX.Element => {
   const theme = useTheme();
@@ -106,26 +35,17 @@ const Hero = (): JSX.Element => {
                 fontWeight: 700,
               }}
             >
-              Turn your ideas
+              Your Trusted
               <br />
-              into{' '}
               <Typography
                 color={'primary'}
                 component={'span'}
                 variant={'inherit'}
-                sx={{
-                  background: `linear-gradient(180deg, transparent 82%, ${alpha(
-                    theme.palette.secondary.main,
-                    0.3,
-                  )} 0%)`,
-                }}
               >
-                <Typed
-                  strings={['startup.', 'future.', 'success.']}
-                  typeSpeed={80}
-                  loop={true}
-                />
+                decision-making
               </Typography>
+              <br />
+              <span>assistant</span>
             </Typography>
             <Typography
               variant="h6"
@@ -133,8 +53,7 @@ const Hero = (): JSX.Element => {
               color="text.secondary"
               sx={{ fontWeight: 400 }}
             >
-              theFront will make your product look modern and professional while
-              saving you precious time.
+              Unlock the power of data with ChatGPT
             </Typography>
             <Box
               display="flex"
@@ -150,7 +69,7 @@ const Hero = (): JSX.Element => {
                 fullWidth={isMd ? false : true}
                 href={'/home'}
               >
-                View pages
+                Join Beta
               </Button>
               <Box
                 marginTop={{ xs: 2, sm: 0 }}
@@ -159,13 +78,13 @@ const Hero = (): JSX.Element => {
               >
                 <Button
                   component={'a'}
-                  href={'/docs/introduction'}
+                  href={'https://snc-lab.notion.site/Light-paper-ChatData-Insight-09f0a9e6147049a1a9eddc945e5b1359?pvs=4'}
                   variant="outlined"
                   color="primary"
                   size="large"
                   fullWidth={isMd ? false : true}
                 >
-                  Documentation
+                  Light Paper
                 </Button>
               </Box>
             </Box>
@@ -180,36 +99,18 @@ const Hero = (): JSX.Element => {
           <Box
             display={'flex'}
             width={'50rem'}
-            left={'50%'}
+            right={'0'}
             top={0}
             position={'absolute'}
-            sx={{ transform: 'translate3d(20%, -50%, 0)' }}
           >
-            {images.map((item, i) => (
-              <Box key={i} marginTop={{ sm: -(i * 16) }} marginX={1}>
-                {item.group.map((g, j) => (
-                  <Box
-                    key={j}
-                    padding={1}
-                    bgcolor={'background.paper'}
-                    borderRadius={2}
-                    boxShadow={3}
-                    marginTop={2}
-                  >
-                    <Box
-                      component={LazyLoadImage}
-                      effect="blur"
-                      src={
-                        theme.palette.mode === 'dark' ? g.coverDark : g.cover
-                      }
-                      height={1}
-                      width={1}
-                      maxWidth={320}
-                    />
-                  </Box>
-                ))}
-              </Box>
-            ))}
+            11
+            {/* <Box
+              component={LazyLoadImage}
+              effect="blur"
+              src={
+                'https://img1.imgtp.com/2023/06/11/S9HuhK1F.png'
+              }
+            /> */}
           </Box>
         </Box>
       </Box>
