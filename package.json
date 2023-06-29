@@ -11,7 +11,8 @@
     "prettier:fix": "prettier './src/**/*.{tsx,ts}' --write",
     "eslint:fix": "eslint ./src --fix",
     "codeStyle:fix": "npm run prettier:fix && npm run eslint:fix",
-    "clear-all": "rimraf ./node_modules ./.next"
+    "clear-all": "rimraf ./node_modules ./.next",
+    "deploy": "next build && next export"
   },
   "eslintConfig": {
     "extends": [
