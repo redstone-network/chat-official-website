@@ -25,11 +25,11 @@ const Hero = (): JSX.Element => {
       }}
     >
       <Box
-        width={{ xs: '100%', sm: '100%', md: '28rem' }}
-        height={{ xs: '16rem', sm: '20rem', md: '15rem' }}
-        position={{ md: 'absolute' }}
-        right={{md: '2rem'}}
-        top={{ md: '10rem' }}
+        width={{ xs: '100%', sm: '100%', md: '28rem', lg: '42rem' }}
+        height={{ xs: '16rem', sm: '20rem', md: '15rem', lg: '22rem' }}
+        position={{ md: 'absolute', lg: 'absolute' }}
+        right={{md: '4rem', right: '8rem'}}
+        top={{ md: '10rem', lg: '16rem' }}
         zIndex={2}
         borderRadius={{md: 2}}
         component="a"
@@ -99,7 +99,7 @@ const Hero = (): JSX.Element => {
                 color="primary"
                 size="large"
                 fullWidth={isMd ? false : true}
-                href={'/home'}
+                href={'https://forms.gle/VXmvY3S7yN7torWT8'}
               >
                 Join Beta
               </Button>
