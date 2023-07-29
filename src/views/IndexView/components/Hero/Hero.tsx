@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useRef, useEffect} from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
@@ -6,13 +6,30 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import { alpha, useTheme } from '@mui/material/styles';
 import Container from 'components/Container';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import YouTubePlayer from './YouTubePlayer';
 
 const Hero = (): JSX.Element => {
   const theme = useTheme();
   const isMd = useMediaQuery(theme.breakpoints.up('md'), {
     defaultMatches: true,
   });
-
+  const [show, setShow] = React.useState(true);
+  const handleReady = (event) =>
+  {
+    console.log('Player is ready:', event);
+    setShow(!show);
+  };
+  const videoRef = useRef(null);
+  const [videoWidth, setVideoWidth] = React.useState(0);
+  const [videoHeight, setVideoHeight] = React.useState(0);
+  useEffect(() =>
+  {
+    if (videoRef.current)
+    {
+      setVideoWidth(videoRef.current.clientWidth);
+      setVideoHeight(videoRef.current.clientHeight);
+    }
+  });
   return (
     <Box
       sx={{
@@ -25,15 +42,16 @@ const Hero = (): JSX.Element => {
       }}
     >
       <Box
-        width={{ xs: '100%', sm: '100%', md: '28rem', lg: '42rem' }}
-        height={{ xs: '16rem', sm: '20rem', md: '15rem', lg: '22rem' }}
+        width={{ xs: '100%', sm: '100%', md: '28rem', lg: '32rem', xl: '42rem' }}
+        height={{ xs: '16rem', sm: '20rem', md: '15rem', lg: '18rem', xl: '22rem' }}
         position={{ md: 'absolute', lg: 'absolute' }}
-        right={{md: '4rem', right: '8rem'}}
-        top={{ md: '10rem', lg: '16rem' }}
+        right={{md: '4rem', lg: '4rem', xl: '4rem', right: '8rem'}}
+        top={{ md: '8rem', lg: '10rem', xl: '16rem' }}
         zIndex={2}
+        ref={videoRef}
         borderRadius={{md: 2}}
-        component="a"
-        href="https://drive.google.com/file/d/11xH_hU5WpjTllz3_gPHVPpFXV56U1NFX/view"
+        // component="a"
+        // href="https://drive.google.com/file/d/1DEcF_B-JLyF-O7rSeWYimsnVZRRlyP3h/view"
         sx={{
           backgroundImage: 'url(https://img1.imgtp.com/2023/06/12/LhoCN18l.png)',
           backgroundSize: 'cover',
@@ -42,19 +60,24 @@ const Hero = (): JSX.Element => {
           alignItems: 'center',
         }}
       >
-        <svg
-          width="48"
-          height="48"
-          viewBox="0 0 48 48"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <circle cx="24" cy="24" r="24" fill="#62D0D6" />
-          <path
-            d="M34.8605 22.8988C35.9294 23.6987 35.9294 25.3013 34.8605 26.1012L19.9484 37.2617C18.6297 38.2487 16.75 37.3077 16.75 35.6605L16.75 13.3395C16.75 11.6923 18.6297 10.7513 19.9484 11.7383L34.8605 22.8988Z"
-            fill="white"
-          />
-        </svg>
+        {show && <div onClick={() => { setShow(!show); }}>
+          <svg
+            width="48"
+            height="48"
+            viewBox="0 0 48 48"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="24" cy="24" r="24" fill="#62D0D6" />
+            <path
+              d="M34.8605 22.8988C35.9294 23.6987 35.9294 25.3013 34.8605 26.1012L19.9484 37.2617C18.6297 38.2487 16.75 37.3077 16.75 35.6605L16.75 13.3395C16.75 11.6923 18.6297 10.7513 19.9484 11.7383L34.8605 22.8988Z"
+              fill="white"
+            />
+          </svg>
+        </div>}
+        {!show && <div>
+          <YouTubePlayer width={videoWidth} height={videoHeight} videoId="9ajLQvndhJA" handleReady={handleReady}></YouTubePlayer>
+        </div>}
       </Box>
       <Box paddingY={{ xs: 0, sm: '7rem', md: '11rem' }}>
         <Container>
