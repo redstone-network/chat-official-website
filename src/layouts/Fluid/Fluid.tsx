@@ -80,7 +80,7 @@ const Fluid = ({
                 component={'img'}
                 src={
                   mode === 'light' && !colorInvert
-                    ? 'https://img1.imgtp.com/2023/06/11/B9LRo7Qm.png'
+                    ? 'https://s2.loli.net/2023/07/29/KMbs8nE1oT5F7LN.png'
                     : 'https://assets.maccarianagency.com/the-front/logos/logo-negative.svg'
                 }
                 height={1}

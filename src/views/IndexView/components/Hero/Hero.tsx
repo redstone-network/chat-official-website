@@ -53,7 +53,7 @@ const Hero = (): JSX.Element => {
         // component="a"
         // href="https://drive.google.com/file/d/1DEcF_B-JLyF-O7rSeWYimsnVZRRlyP3h/view"
         sx={{
-          backgroundImage: 'url(https://img1.imgtp.com/2023/06/12/LhoCN18l.png)',
+          backgroundImage: 'url(https://s2.loli.net/2023/07/29/VyirGC2MskBKuDc.png)',
           backgroundSize: 'cover',
           display: 'flex',
           justifyContent: 'center',
@@ -162,7 +162,7 @@ const Hero = (): JSX.Element => {
             <Box
               component={LazyLoadImage}
               effect="blur"
-              src={'https://img1.imgtp.com/2023/06/11/S9HuhK1F.png'}
+              src={'https://s2.loli.net/2023/07/29/m9rb8j4n2Ye7IhZ.png'}
             />
           </Box>
         </Box>
