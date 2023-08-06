@@ -11,7 +11,7 @@ const Footer = (): JSX.Element => {
         color="text.secondary"
         gutterBottom
       >
-        &copy; Chatdatainsight. 2021, Maccarian. All rights reserved
+        &copy; Chatdatainsight. 2023.  All rights reserved
       </Typography>
       <Typography
         align={'center'}

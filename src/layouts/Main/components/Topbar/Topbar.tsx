@@ -4,6 +4,8 @@ import Button from '@mui/material/Button';
 import { alpha, useTheme } from '@mui/material/styles';
 import MenuIcon from '@mui/icons-material/Menu';
 import ThemeModeToggler from 'components/ThemeModeToggler';
+import IconButton from '@mui/material/IconButton';
+import TwitterIcon from '@mui/icons-material/Twitter';
 
 interface Props {
   // eslint-disable-next-line @typescript-eslint/ban-types
@@ -111,6 +113,20 @@ const Topbar = ({
         </Box> */}
         <Box marginLeft={4}>
           <ThemeModeToggler />
+        </Box>
+        <Box marginLeft={4}>
+        </Box>
+        <Box marginTop={1}>
+          <IconButton
+            aria-label="twitter"
+            size={'small'}
+            component="a"
+            target="blank"
+            href="https://twitter.com/ChatdataInsight"
+            color={'primary'}
+          >
+            <TwitterIcon />
+          </IconButton>
         </Box>
         <Box marginLeft={4}>
           <Button

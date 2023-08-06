@@ -47,7 +47,7 @@ const Topbar = ({ handleMobileMenuClick, pages = [] }: Props): JSX.Element => {
           src={
             mode === 'light'
               ? 'https://s2.loli.net/2023/07/29/KMbs8nE1oT5F7LN.png'
-              : 'https://assets.maccarianagency.com/the-front/logos/logo-negative.svg'
+              : 'https://s2.loli.net/2023/07/29/KMbs8nE1oT5F7LN.png'
           }
           height={1}
           width={1}
